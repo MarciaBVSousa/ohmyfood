@@ -22,64 +22,72 @@
     ></script>
 </head>
 <body>
-    <header>
+    <header class="heading">
         <img class="heading__logo" src="./images/logo/ohmyfood@2x.svg" alt="OhMyFood logo">
     </header>
     <main>
-        <div>
-            <!-- ICONE -->
+        <div class="place">
             <i class="fa-solid fa-location-dot"></i>
             <span>Paris, Belleville</span>
         </div>
-        <div>
+        <div class="explore">
             <h2>Book the menu you like</h2>
             <p>Discover top-of-the-art restaurants we picked for you</p>
-            <button>Explore our restaurants</button>
+            <button class="explore__btn">Explore our restaurants</button>
         </div>
-        <div>
+        <div class="instructions">
             <h2>How it works</h2>
-            <div>
-                <div>
-                    <!-- ICONE -->
+            <div  class="instructions__btns">
+                <div class="instructions__btn">
                     <i class="fa-solid fa-mobile-screen-button"></i>
                     <span>Chose a restaurant</span>
                 </div>
-                <div>
-                    <!-- ICONE -->
+                <div class="instructions__btn">
                     <i class="fa-solid fa-list-ul"></i>
                     <span>Create your menu</span>
                 </div>
-                <div>
-                    <!-- ICONE -->
+                <div class="instructions__btn instructions__btn--colored">
                     <i class="fa-solid fa-store"></i>
                     <span>Go enjoy it at the restaurant</span>
                 </div>
             </div>
         </div>
-        <div>
+        <div class="restaurants">
             <h2>Restaurants</h2>
-            <a href="#">
+            <a href="#" class="restaurants__card restaurants__card--new">
                 <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt=""> <!-- Insert alt -->
-                <div>
-                    <div>
+                <div class="restaurants__card__title">
+                    <span>
                         <h3>The Full Pallete</h3>
                         <p>New York</p>
-                    </div>
-                    <div>
-                        <!-- ICONE -->
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
+                    </span>
+                    <i class="fa-solid fa-heart"></i>
+
                 </div>
             </a>
         </div>
     </main>
     <footer>
-        <img src="./images/logo/ohmyfood@2x.svg" alt="OhMyFood logo">
+        <img class="logo" src="./images/logo/ohmyfood@2x.svg" alt="OhMyFood logo">
         <ul>
-            <li><a href="#">Suggest a restaurant</a></li>
-            <li><a href="#">Become a partner</a></li>
-            <li><a href="#">Legal</a></li>
-            <li><a href="#">Contact</a></li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-utensils fa-fw"></i>
+                    Suggest a restaurant
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-handshake-angle fa-fw"></i>
+                    Become a partner
+                </a>
+            </li>
+            <li>
+                <a href="#">Legal</a>
+            </li>
+            <li>
+                <a href="mailto:contact@ohmyfood.com">Contact</a>
+            </li>
         </ul>
     </footer>
 </body>

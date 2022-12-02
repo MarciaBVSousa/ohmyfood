@@ -23,95 +23,155 @@
 </head>
 <body>
     <header class="heading">
+        <a href="index.html">
+            <i class="fa-sharp fa-solid fa-arrow-left heading__btn-back"></i>
+        </a>
         <img class="heading__logo" src="./images/logo/ohmyfood@2x.svg" alt="OhMyFood logo">
-        <i class="fa-solid fa-arrow-left heading__btn-back"></i>
     </header>
     <main>
-        <img src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg">
-        <div>
+        <img class="menu-img" src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg">
+        <div class="menu-title">
             <h2>Bastille</h2>
-            <!-- ICON -->
+            <label for="title-heart">
+                <input type="checkbox" id="title-heart">
+                <i class="fa-solid fa-heart"></i>
+            </label>
         </div>
-        <div>
-            <span>Entrees</span>
-            <div>
+        <form class="menu">
+            <div class="menu__section">
+                <span class="menu__section-title">Entrees</span>
                 <div>
-                    <h3>Citrus Squid Carpaccio</h3>
-                    <span>
-                        <p>With orange zest</p>
-                        <span>25€</span>
-                    </span>
-                </div>
-                <div>
-                    <h3>Grandmother's Vegetable Soup</h3>
-                    <span>
-                        <p>Carrots, parsnips, Jerusalem artichoke</p>
-                        <span>35€</span>
-                    </span>
-                </div>
-                <div>
-                    <h3>Onion Soup</h3>
-                    <span>
-                        <p>Revisted</p>
-                        <span>20€</span>
-                    </span>
+                    <label for="entree01" class="menu__item">
+                        <input class="menu__input" type="checkbox" id="entree01">
+                        <div class="menu__item__description">
+                            <h3>Citrus Squid Carpaccio</h3>
+                            <p>With orange zest</p>
+                        </div>
+                        <div class="menu__item__price">
+                            <span>25€</span>
+                        </div>
+                        <div class="menu__item__check">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </label>
+                    <label for="entree02" class="menu__item">
+                        <input class="menu__input" type="checkbox" id="entree02">
+                        <div class="menu__item__description">
+                            <h3>Grandmother's Vegetable Soup</h3>
+                            <p>Carrots, parsnips, Jerusalem artichoke</p>
+                        </div>
+                        <div class="menu__item__price">
+                            <span>35€</span>
+                        </div>
+                        <div class="menu__item__check">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </label>
+                    <label for="entree03" class="menu__item">
+                        <input class="menu__input" type="checkbox" id="entree03">
+                        <div class="menu__item__description">
+                            <h3>Onion Soup</h3>
+                            <p>Revisted</p>
+                        </div>
+                        <div class="menu__item__price">
+                            <span>20€</span>
+                        </div>
+                        <div class="menu__item__check">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </label>
                 </div>
             </div>
-        </div>
-        <div>
-            <span>Main Dish</span>
-            <div>
+            <div class="menu__section">
+                <span class="menu__section-title">Main Dish</span>
                 <div>
-                    <h3>Scallops</h3>
-                    <span>
-                        <p>With mashed parsnip</p>
-                        <span>40€</span>
-                    </span>
-                </div>
-                <div>
-                    <h3>Magret de canard</h3>
-                    <span>
-                        <p>With mashed potatoes</p>
-                        <span>35€</span>
-                    </span>
-                </div>
-                <div>
-                    <h3>Game Hen</h3>
-                    <span>
-                        <p>With vegetable gnocchis</p>
-                        <span>44€</span>
-                    </span>
-                </div>
-            </div>
-        </div>
-        <div>
-            <span>Desserts</span>
-            <div>
-                <div>
-                    <h3>Floral Ice Cream</h3>
-                    <span>
-                        <p>With hazelnut butter</p>
-                        <span>18€</span>
-                    </span>
-                </div>
-                <div>
-                    <h3>Chocolate Lava Cake</h3>
-                    <span>
-                        <p>Revisted</p>
-                        <span>22€</span>
-                    </span>
-                </div>
-                <div>
-                    <h3>Napolean</h3>
-                    <span>
-                        <p>With blueberries and marzipan</p>
-                        <span>23€</span>
-                    </span>
+                    <label for="main-dish01" class="menu__item">
+                        <input class="menu__input" type="checkbox" id="main-dish01">
+                        <div class="menu__item__description">
+                            <h3>Scallops</h3>
+                            <p>With mashed parsnip</p>
+                        </div>
+                        <div class="menu__item__price">
+                            <span>40€</span>
+                        </div>
+                        <div class="menu__item__check">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </label>
+                    <label for="main-dish02" class="menu__item">
+                        <input class="menu__input" type="checkbox" id="main-dish02">
+                        <div class="menu__item__description">
+                            <h3>Magret de canard</h3>
+                            <p>With mashed potatoes</p>
+                        </div>
+                        <div class="menu__item__price">
+                            <span>35€</span>
+                        </div>
+                        <div class="menu__item__check">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </label>
+                    <label for="main-dish03" class="menu__item">
+                        <input class="menu__input" type="checkbox" id="main-dish03">
+                        <div class="menu__item__description">
+                            <h3>Game Hen</h3>
+                            <p>With vegetable gnocchis</p>
+                        </div>
+                        <div class="menu__item__price">
+                            <span>44€</span>
+                        </div>
+                        <div class="menu__item__check">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </label>
                 </div>
             </div>
-        </div>
-        <button>Order</button>
-
+            <div class="menu__section">
+                <span class="menu__section-title">Desserts</span>
+                <div>
+                    <label for="desserts01" class="menu__item">
+                        <input class="menu__input" type="checkbox" id="desserts01">
+                        <div class="menu__item__description">
+                            <h3>Floral Ice Cream</h3>
+                            <p>With hazelnut butter</p>
+                        </div>
+                        <div class="menu__item__price">
+                            <span>18€</span>
+                        </div>
+                        <div class="menu__item__check">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </label>
+                    <label for="desserts02" class="menu__item">
+                        <input class="menu__input" type="checkbox" id="desserts02">
+                        <div class="menu__item__description">
+                            <h3>Chocolate Lava Cake</h3>
+                            <p>Revisted</p>
+                        </div>
+                        <div class="menu__item__price">
+                            <span>22€</span>
+                        </div>
+                        <div class="menu__item__check">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </label>
+                    <label for="desserts03" class="menu__item">
+                        <input class="menu__input" type="checkbox" id="desserts03">
+                        <div class="menu__item__description">
+                            <h3>Napolean</h3>
+                            <p>With blueberries and marzipan</p>
+                        </div>
+                        <div class="menu__item__price">
+                            <span>23€</span>
+                        </div>
+                        <div class="menu__item__check">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <button class="menu__btn" type="submit">Order</button>
+        </form>
     </main>
 </body>
 </html>
