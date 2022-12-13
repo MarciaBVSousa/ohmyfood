@@ -1,0 +1,27 @@
+@use '../util/variables' as *;
+
+
+html {
+    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Shrikhand', cursive; */
+}
+
+h2, h3 {
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+span {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+p {
+    font-size: .9rem;
+    font-weight: 500;
+    color: lighten($dark-bg-color, 10%);
+/*    font-weight: 200; */
+}

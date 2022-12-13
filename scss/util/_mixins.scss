@@ -1,0 +1,62 @@
+@use 'variables' as *;
+
+
+/* MIXINs */
+
+@mixin flex($direction: row, $justify: flex-start, $align: stretch) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin btn-std {
+    height: 3rem;
+    padding: 0rem 1.5rem;
+    border: none;
+    border-radius: 2rem;
+    color:white;
+    background: linear-gradient(to bottom right, $secondary-color, $primary-color);
+    box-shadow: darken($light-bg-color, 20%) 0rem .2rem .3rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        background: linear-gradient(to bottom right, lighten($secondary-color, 5%), lighten($primary-color, 5%)); 
+        box-shadow: darken($light-bg-color, 50%) 0rem .2rem .3rem;
+    }
+}
+
+@mixin menu__item--checked {
+    width: 5rem;
+    transform: translateX(0);
+    i {
+        transform: rotate(0deg);
+    }
+}
+
+@mixin heart--outline {
+    font-weight: 100; 
+    font-size: 1.2rem;
+    color: $dark-bg-color;
+    transform: scale(1.1, 1.25);
+}
+
+@mixin heart--fill {
+    background: linear-gradient(to top right, $secondary-color, $primary-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    /* if incompatible browser */
+    color: $primary-color;
+}
+
+@mixin input-check($sibling) {
+    input {
+        all: unset;
+        &:checked ~ #{$sibling} {
+            @content;
+       }
+    }
+}

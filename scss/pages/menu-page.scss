@@ -1,0 +1,219 @@
+
+@use '../base/config' as *;
+@use '../util' as *;
+@use '../layout' as *;
+
+
+.heading, main, footer {
+    animation: menu-items-landing 1s ease-in-out 1 both;
+}
+
+.menu-img {
+    width: 100%;
+    max-height: 30vh;
+    object-fit: cover;
+    z-index: -1;
+    position: relative;
+}
+
+.menu-title {
+    padding: 2.5rem 1.2rem .5rem;
+    margin-top: -2.5rem;
+    border-top-left-radius: 2.5rem;
+    border-top-right-radius: 2.5rem;
+    background-color: $light-bg-color;
+    @include flex($justify: space-between);
+
+
+    h2 {
+        font-size: 2rem;
+        font-family: 'Shrikhand';
+        font-weight: 500;
+    }
+
+    i {
+        padding: 0 1rem;
+        /* HEART MIXIN */
+        @include heart--outline;
+
+        /* HEART MIXIN */
+        &:hover {
+            @include heart--fill;
+        }
+    }
+
+    @include input-check(i) {
+        @include heart--fill;
+    }
+
+    /*
+    input {
+         all: unset;
+        &:checked + i {
+            @include heart--fill;
+        }
+    }
+    */
+}
+
+.menu {
+    background-color: $light-bg-color;
+    padding: 2rem 1.2rem;
+
+    @for $i from 1 through 3 {
+        & > div:nth-of-type(#{$i}) {
+
+            $m: .6 * $i;
+            animation: menu-items-landing .6s ease-in-out 1 both;
+            animation-delay: 620ms * $i;
+
+            &::before {
+                content: "#{$m}";
+                font-size: .8rem;
+                width: 1.4rem;
+                height: 1.4rem;
+                background-color: $secondary-color;
+                color: white;
+                border-radius: 50%;
+                position: absolute;
+                text-align: center;
+                line-height: 1.5rem; /* to center the content*/
+            }
+
+            @for $d from 1 through 4 {
+                & label:nth-of-type(#{$d}) {
+                    
+                    $t: ($i * 400) + (240 * $d);
+                    animation: menu-items-landing .6s ease-in-out 1 both;
+                    animation-delay: ($i * 400ms) + (180ms * $d) + 160ms ;
+                    
+                    &::before {
+                        content: "#{$t}";
+                        font-size: .8rem;
+                        width: 1.4rem;
+                        height: 1.4rem;
+                        background-color: $primary-color;
+                        color: white;
+                        border-radius: 50%;
+                        position: absolute;    
+                        text-align: center;
+                        line-height: 1.5rem; /* to center the content*/
+                    }
+                }
+            }
+        }
+    }
+
+    &__section {
+        margin-bottom: 3rem;
+    }
+    
+    &__section-title {
+        text-transform: uppercase;
+        font-weight: 500;
+        color: $dark-bg-color;
+        margin: .4rem;
+        
+        &::after {
+            content: "";
+            display: block;
+            width: 3rem;
+            height: .2rem;
+            margin: .4rem .4rem -.6rem;
+            background-color: $tertiary-color;
+        }
+    }
+    
+    &__item {
+        background-color: white;
+        border-radius: 1rem;
+        box-shadow: darken($light-bg-color, 10%) .1rem .2rem .6rem;
+        margin: .5rem 0;
+        height: 4rem;
+        overflow: hidden; 
+        cursor: pointer;
+        @include flex($justify: space-between); 
+
+        &__description {
+        /*    box-sizing : border-box; */
+            width: calc(100% - 3rem);
+            padding: .8rem;
+        /*    flex-shrink: 5; */
+        /*    overflow: hidden; */
+            min-width: 0;
+
+
+            p, h3 {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                padding: .2rem;
+            }
+
+            
+            /*
+            p { 
+
+                font-size: .9rem;
+                font-weight: 500;
+                color: $dark-bg-color;
+            }
+            */
+            
+        }
+        
+        &__price {
+            color: $dark-bg-color;
+            width: 3rem;
+            padding: .8rem;
+            @include flex(row, center, flex-end);
+
+        }
+        
+        &__check {
+            width: 0;
+            background-color: $tertiary-color;
+            color: white;
+            transform: translateX(2rem);
+            @include flex(row, center, center);
+
+            i {
+                font-size: 1.4rem;
+                transform: rotate(-360deg);
+            }
+
+            &, i {
+                transition: all ease-in-out .5s;
+            }    
+        }
+
+        &:hover {
+            .menu__item__check {
+                @include menu__item--checked;
+            }
+        }
+
+        @include input-check(".menu__item__check") {
+            background-color: darken($tertiary-color, 15%);
+            @include menu__item--checked;
+        }
+
+    /*
+        input {
+            all: unset;
+            &:checked ~ .menu__item__check {
+                background-color: darken($tertiary-color, 15%);
+                @include menu__item--checked;
+            }
+        }
+    */
+    }
+
+    &__btn {
+        display: block;
+        width: 10rem;
+        margin: 1rem auto;
+        animation: menu-items-landing .4s ease-in-out 2.4s 1 both;
+        @include btn-std;
+    }
+}

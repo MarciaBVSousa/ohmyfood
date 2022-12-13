@@ -1,0 +1,33 @@
+/* HOME ANIMATION */
+
+@keyframes rotating {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes fading-hide {
+    0% {
+        transform: scale(0);
+    }
+    1% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* MENU ANIMATION */
+
+@keyframes menu-items-landing {
+    from {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
