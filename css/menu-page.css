@@ -1,0 +1,620 @@
+/* Colors */
+/* purple */
+/* pink */
+/* light green */
+html {
+  font-family: "Roboto", sans-serif;
+  /* font-family: 'Shrikhand', cursive; */
+}
+
+h2, h3 {
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+span {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #4f4f4f;
+  /*    font-weight: 200; */
+}
+
+strong {
+  font-weight: 700;
+}
+
+small {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #4f4f4f;
+}
+
+/* MIXINs */
+/* HOME ANIMATION */
+@-webkit-keyframes rotating {
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes rotating {
+  to {
+    transform: rotate(1turn);
+  }
+}
+@-webkit-keyframes fading-hide {
+  0% {
+    transform: scale(0);
+  }
+  1% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fading-hide {
+  0% {
+    transform: scale(0);
+  }
+  1% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* MENU ANIMATION */
+@-webkit-keyframes menu-items-landing {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes menu-items-landing {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.heading {
+  padding-top: 0.5rem;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  /* -- MENU PAGE -- */
+}
+.heading__logo {
+  flex-grow: 2;
+  text-align: center;
+}
+.heading__logo img {
+  padding: 0.6rem;
+  width: 50vw;
+  max-height: 2rem;
+}
+.heading__btn-back {
+  font-size: 1.2rem;
+  color: #353535;
+  padding: 0.2rem 0 0.6rem 1rem;
+}
+
+footer {
+  padding: 2rem 1.2rem;
+  background-color: #353535;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+footer img {
+  filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(111deg) brightness(103%) contrast(102%);
+  height: 1rem;
+}
+footer ul {
+  margin: 1rem 0;
+}
+footer ul > * {
+  padding: 0.4rem 0;
+}
+footer ul i {
+  width: 1rem;
+  padding-right: 0.5rem;
+}
+footer a, footer li {
+  color: #f6f6f6;
+  transition: all ease-in-out 0.15s;
+}
+footer a:hover, footer li:hover {
+  color: #d7c0f2;
+}
+
+.heading, main, footer {
+  -webkit-animation: menu-items-landing 1s ease-in-out 1 both;
+          animation: menu-items-landing 1s ease-in-out 1 both;
+}
+
+.menu-img {
+  width: 100%;
+  max-height: 30vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+  position: relative;
+}
+
+.menu-title {
+  padding: 2.5rem 1.2rem 0.5rem;
+  margin-top: -2.5rem;
+  border-top-left-radius: 2.5rem;
+  border-top-right-radius: 2.5rem;
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  /*
+  input {
+       all: unset;
+      &:checked + i {
+          @include heart--fill;
+      }
+  }
+  */
+}
+.menu-title h2 {
+  font-size: 2rem;
+  font-family: "Shrikhand";
+  font-weight: 500;
+}
+.menu-title i {
+  padding: 0 1rem;
+  /* HEART MIXIN */
+  font-weight: 100;
+  font-size: 1.2rem;
+  color: #353535;
+  transform: scale(1.1, 1.25);
+  /* HEART MIXIN */
+}
+.menu-title i:hover {
+  background: linear-gradient(to top right, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  /* if incompatible browser */
+  color: #9356DC;
+}
+.menu-title input {
+  all: unset;
+}
+.menu-title input:checked ~ i {
+  background: linear-gradient(to top right, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  /* if incompatible browser */
+  color: #9356DC;
+}
+
+.menu {
+  background-color: #f6f6f6;
+  padding: 2rem 1.2rem;
+}
+.menu > div:nth-of-type(1) {
+  -webkit-animation: menu-items-landing 0.6s ease-in-out 1 both;
+          animation: menu-items-landing 0.6s ease-in-out 1 both;
+  -webkit-animation-delay: 620ms;
+          animation-delay: 620ms;
+}
+.menu > div:nth-of-type(1)::before {
+  content: "0.6";
+  font-size: 0.8rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: #FF79DA;
+  color: white;
+  border-radius: 50%;
+  position: absolute;
+  text-align: center;
+  line-height: 1.5rem; /* to center the content*/
+}
+.menu > div:nth-of-type(1) label:nth-of-type(1) {
+  -webkit-animation: menu-items-landing 0.6s ease-in-out 1 both;
+          animation: menu-items-landing 0.6s ease-in-out 1 both;
+  -webkit-animation-delay: 740ms;
+          animation-delay: 740ms;
+}
+.menu > div:nth-of-type(1) label:nth-of-type(1)::before {
+  content: "640";
+  font-size: 0.8rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: #9356DC;
+  color: white;
+  border-radius: 50%;
+  position: absolute;
+  text-align: center;
+  line-height: 1.5rem; /* to center the content*/
+}
+.menu > div:nth-of-type(1) label:nth-of-type(2) {
+  -webkit-animation: menu-items-landing 0.6s ease-in-out 1 both;
+          animation: menu-items-landing 0.6s ease-in-out 1 both;
+  -webkit-animation-delay: 920ms;
+          animation-delay: 920ms;
+}
+.menu > div:nth-of-type(1) label:nth-of-type(2)::before {
+  content: "880";
+  font-size: 0.8rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: #9356DC;
+  color: white;
+  border-radius: 50%;
+  position: absolute;
+  text-align: center;
+  line-height: 1.5rem; /* to center the content*/
+}
+.menu > div:nth-of-type(1) label:nth-of-type(3) {
+  -webkit-animation: menu-items-landing 0.6s ease-in-out 1 both;
+          animation: menu-items-landing 0.6s ease-in-out 1 both;
+  -webkit-animation-delay: 1100ms;
+          animation-delay: 1100ms;
+}
+.menu > div:nth-of-type(1) label:nth-of-type(3)::before {
+  content: "1120";
+  font-size: 0.8rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: #9356DC;
+  color: white;
+  border-radius: 50%;
+  position: absolute;
+  text-align: center;
+  line-height: 1.5rem; /* to center the content*/
+}
+.menu > div:nth-of-type(1) label:nth-of-type(4) {
+  -webkit-animation: menu-items-landing 0.6s ease-in-out 1 both;
+          animation: menu-items-landing 0.6s ease-in-out 1 both;
+  -webkit-animation-delay: 1280ms;
+          animation-delay: 1280ms;
+}
+.menu > div:nth-of-type(1) label:nth-of-type(4)::before {
+  content: "1360";
+  font-size: 0.8rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: #9356DC;
+  color: white;
+  border-radius: 50%;
+  position: absolute;
+  text-align: center;
+  line-height: 1.5rem; /* to center the content*/
+}
+.menu > div:nth-of-type(2) {
+  -webkit-animation: menu-items-landing 0.6s ease-in-out 1 both;
+          animation: menu-items-landing 0.6s ease-in-out 1 both;
+  -webkit-animation-delay: 1240ms;
+          animation-delay: 1240ms;
+}
+.menu > div:nth-of-type(2)::before {
+  content: "1.2";
+  font-size: 0.8rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: #FF79DA;
+  color: white;
+  border-radius: 50%;
+  position: absolute;
+  text-align: center;
+  line-height: 1.5rem; /* to center the content*/
+}
+.menu > div:nth-of-type(2) label:nth-of-type(1) {
+  -webkit-animation: menu-items-landing 0.6s ease-in-out 1 both;
+          animation: menu-items-landing 0.6s ease-in-out 1 both;
+  -webkit-animation-delay: 1140ms;
+          animation-delay: 1140ms;
+}
+.menu > div:nth-of-type(2) label:nth-of-type(1)::before {
+  content: "1040";
+  font-size: 0.8rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: #9356DC;
+  color: white;
+  border-radius: 50%;
+  position: absolute;
+  text-align: center;
+  line-height: 1.5rem; /* to center the content*/
+}
+.menu > div:nth-of-type(2) label:nth-of-type(2) {
+  -webkit-animation: menu-items-landing 0.6s ease-in-out 1 both;
+          animation: menu-items-landing 0.6s ease-in-out 1 both;
+  -webkit-animation-delay: 1320ms;
+          animation-delay: 1320ms;
+}
+.menu > div:nth-of-type(2) label:nth-of-type(2)::before {
+  content: "1280";
+  font-size: 0.8rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: #9356DC;
+  color: white;
+  border-radius: 50%;
+  position: absolute;
+  text-align: center;
+  line-height: 1.5rem; /* to center the content*/
+}
+.menu > div:nth-of-type(2) label:nth-of-type(3) {
+  -webkit-animation: menu-items-landing 0.6s ease-in-out 1 both;
+          animation: menu-items-landing 0.6s ease-in-out 1 both;
+  -webkit-animation-delay: 1500ms;
+          animation-delay: 1500ms;
+}
+.menu > div:nth-of-type(2) label:nth-of-type(3)::before {
+  content: "1520";
+  font-size: 0.8rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: #9356DC;
+  color: white;
+  border-radius: 50%;
+  position: absolute;
+  text-align: center;
+  line-height: 1.5rem; /* to center the content*/
+}
+.menu > div:nth-of-type(2) label:nth-of-type(4) {
+  -webkit-animation: menu-items-landing 0.6s ease-in-out 1 both;
+          animation: menu-items-landing 0.6s ease-in-out 1 both;
+  -webkit-animation-delay: 1680ms;
+          animation-delay: 1680ms;
+}
+.menu > div:nth-of-type(2) label:nth-of-type(4)::before {
+  content: "1760";
+  font-size: 0.8rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: #9356DC;
+  color: white;
+  border-radius: 50%;
+  position: absolute;
+  text-align: center;
+  line-height: 1.5rem; /* to center the content*/
+}
+.menu > div:nth-of-type(3) {
+  -webkit-animation: menu-items-landing 0.6s ease-in-out 1 both;
+          animation: menu-items-landing 0.6s ease-in-out 1 both;
+  -webkit-animation-delay: 1860ms;
+          animation-delay: 1860ms;
+}
+.menu > div:nth-of-type(3)::before {
+  content: "1.8";
+  font-size: 0.8rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: #FF79DA;
+  color: white;
+  border-radius: 50%;
+  position: absolute;
+  text-align: center;
+  line-height: 1.5rem; /* to center the content*/
+}
+.menu > div:nth-of-type(3) label:nth-of-type(1) {
+  -webkit-animation: menu-items-landing 0.6s ease-in-out 1 both;
+          animation: menu-items-landing 0.6s ease-in-out 1 both;
+  -webkit-animation-delay: 1540ms;
+          animation-delay: 1540ms;
+}
+.menu > div:nth-of-type(3) label:nth-of-type(1)::before {
+  content: "1440";
+  font-size: 0.8rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: #9356DC;
+  color: white;
+  border-radius: 50%;
+  position: absolute;
+  text-align: center;
+  line-height: 1.5rem; /* to center the content*/
+}
+.menu > div:nth-of-type(3) label:nth-of-type(2) {
+  -webkit-animation: menu-items-landing 0.6s ease-in-out 1 both;
+          animation: menu-items-landing 0.6s ease-in-out 1 both;
+  -webkit-animation-delay: 1720ms;
+          animation-delay: 1720ms;
+}
+.menu > div:nth-of-type(3) label:nth-of-type(2)::before {
+  content: "1680";
+  font-size: 0.8rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: #9356DC;
+  color: white;
+  border-radius: 50%;
+  position: absolute;
+  text-align: center;
+  line-height: 1.5rem; /* to center the content*/
+}
+.menu > div:nth-of-type(3) label:nth-of-type(3) {
+  -webkit-animation: menu-items-landing 0.6s ease-in-out 1 both;
+          animation: menu-items-landing 0.6s ease-in-out 1 both;
+  -webkit-animation-delay: 1900ms;
+          animation-delay: 1900ms;
+}
+.menu > div:nth-of-type(3) label:nth-of-type(3)::before {
+  content: "1920";
+  font-size: 0.8rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: #9356DC;
+  color: white;
+  border-radius: 50%;
+  position: absolute;
+  text-align: center;
+  line-height: 1.5rem; /* to center the content*/
+}
+.menu > div:nth-of-type(3) label:nth-of-type(4) {
+  -webkit-animation: menu-items-landing 0.6s ease-in-out 1 both;
+          animation: menu-items-landing 0.6s ease-in-out 1 both;
+  -webkit-animation-delay: 2080ms;
+          animation-delay: 2080ms;
+}
+.menu > div:nth-of-type(3) label:nth-of-type(4)::before {
+  content: "2160";
+  font-size: 0.8rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: #9356DC;
+  color: white;
+  border-radius: 50%;
+  position: absolute;
+  text-align: center;
+  line-height: 1.5rem; /* to center the content*/
+}
+.menu__section {
+  margin-bottom: 3rem;
+}
+.menu__section-title {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #353535;
+  margin: 0.4rem;
+}
+.menu__section-title::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 0.2rem;
+  margin: 0.4rem 0.4rem -0.6rem;
+  background-color: #99E2D0;
+}
+.menu__item {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: #dddddd 0.1rem 0.2rem 0.6rem;
+  margin: 0.5rem 0;
+  height: 4rem;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  /*
+      input {
+          all: unset;
+          &:checked ~ .menu__item__check {
+              background-color: darken($tertiary-color, 15%);
+              @include menu__item--checked;
+          }
+      }
+  */
+}
+.menu__item__description {
+  /*    box-sizing : border-box; */
+  width: 100%;
+  padding: 0.8rem;
+  /*    flex-shrink: 5; */
+  /*    overflow: hidden; */
+  min-width: 0;
+  /*
+  p { 
+
+      font-size: .9rem;
+      font-weight: 500;
+      color: $dark-bg-color;
+  }
+  */
+}
+.menu__item__description strong, .menu__item__description small {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 0.2rem;
+  display: block;
+}
+.menu__item__price {
+  color: #353535;
+  width: 3rem;
+  padding: 0.8rem 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+.menu__item__check {
+  width: 0;
+  background-color: #99E2D0;
+  color: white;
+  transform: translateX(2rem);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.menu__item__check i {
+  font-size: 1.4rem;
+  transform: rotate(-360deg);
+}
+.menu__item__check, .menu__item__check i {
+  transition: all ease-in-out 0.5s;
+}
+.menu__item:hover .menu__item__check {
+  width: 5rem;
+  transform: translateX(0);
+}
+.menu__item:hover .menu__item__check i {
+  transform: rotate(0deg);
+}
+.menu__item input {
+  all: unset;
+}
+.menu__item input:checked ~ .menu__item__check {
+  background-color: #5dd1b5;
+  width: 5rem;
+  transform: translateX(0);
+}
+.menu__item input:checked ~ .menu__item__check i {
+  transform: rotate(0deg);
+}
+.menu__btn {
+  display: block;
+  width: 10rem;
+  margin: 1rem auto;
+  -webkit-animation: menu-items-landing 0.4s ease-in-out 2.4s 1 both;
+          animation: menu-items-landing 0.4s ease-in-out 2.4s 1 both;
+  height: 3rem;
+  padding: 0rem 1.5rem;
+  border: none;
+  border-radius: 2rem;
+  color: white;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  box-shadow: #c3c3c3 0rem 0.2rem 0.3rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.menu__btn:hover {
+  background: linear-gradient(to bottom right, #ff93e1, #a16be0);
+  box-shadow: #777777 0rem 0.2rem 0.3rem;
+}/*# sourceMappingURL=menu-page.css.map */

@@ -7,7 +7,7 @@
     <title>Menu - Le Gourmand</title>
 
     <link rel="stylesheet" href="./css/reset.css">
-	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/menu-page.css">
 
     <!-- font Roboto -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
@@ -26,10 +26,12 @@
         <a href="index.html">
             <i class="fa-sharp fa-solid fa-arrow-left heading__btn-back"></i>
         </a>
-        <img class="heading__logo" src="./images/logo/ohmyfood@2x.svg" alt="OhMyFood logo">
+        <h1 class="heading__logo">
+            <img src="./images/logo/ohmyfood@2x.svg" alt="OhMyFood logo">
+        </h1>
     </header>
     <main>
-        <img class="menu-img" src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg">
+        <img class="menu-img" src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="A beautiful meal presentation">
         <div class="menu-title">
             <h2>Le Gourmand</h2>
             <label for="title-heart">
@@ -42,43 +44,43 @@
                 <span class="menu__section-title">Entrees</span>
                 <div class="menu__section-items">
                     <label for="entree01" class="menu__item">
-                        <input class="menu__input" type="checkbox" id="entree01">
-                        <div class="menu__item__description">
-                            <h3>Tunna Carpaccio</h3>
-                            <p>Seasoned with yuzu</p>
-                        </div>
-                        <div class="menu__item__price">
+                        <input type="checkbox" id="entree01">
+                        <span class="menu__item__description">
+                            <strong>Tunna Carpaccio</strong>
+                            <small>Seasoned with yuzu</small>>
+                        </span>
+                        <span class="menu__item__price">
                             <span>25€</span>
-                        </div>
-                        <div class="menu__item__check">
+                        </span>
+                        <span class="menu__item__check">
                             <i class="fa-solid fa-circle-check"></i>
-                        </div>
+                        </span>
                     </label>
                     <label for="entree02" class="menu__item">
-                        <input class="menu__input" type="checkbox" id="entree02">
-                        <div class="menu__item__description">
-                            <h3>Crunchy Lobster Croquets</h3>
-                            <p>With seasonal vegetables</p>
-                        </div>
-                        <div class="menu__item__price">
+                        <input type="checkbox" id="entree02">
+                        <span class="menu__item__description">
+                            <strong>Crunchy Lobster Croquets</strong>
+                            <small>With seasonal vegetables</small>>
+                        </span>
+                        <span class="menu__item__price">
                             <span>35€</span>
-                        </div>
-                        <div class="menu__item__check">
+                        </span>
+                        <span class="menu__item__check">
                             <i class="fa-solid fa-circle-check"></i>
-                        </div>
+                        </span>
                     </label>
                     <label for="entree03" class="menu__item">
-                        <input class="menu__input" type="checkbox" id="entree03">
-                        <div class="menu__item__description">
-                            <h3>Mushroom Soup</h3>
-                            <p>With truffles</p>
-                        </div>
-                        <div class="menu__item__price">
+                        <input type="checkbox" id="entree03">
+                        <span class="menu__item__description">
+                            <strong>Mushroom Soup</strong>
+                            <small>With truffles</small>>
+                        </span>
+                        <span class="menu__item__price">
                             <span>20€</span>
-                        </div>
-                        <div class="menu__item__check">
+                        </span>
+                        <span class="menu__item__check">
                             <i class="fa-solid fa-circle-check"></i>
-                        </div>
+                        </span>
                     </label>
                 </div>
             </div>
@@ -86,43 +88,43 @@
                 <span class="menu__section-title">Main Dish</span>
                 <div class="menu__section-items">
                     <label for="main-dish01" class="menu__item">
-                        <input class="menu__input" type="checkbox" id="main-dish01">
-                        <div class="menu__item__description">
-                            <h3>Roast Chicken with Provincal Herbs</h3>
-                            <p>With truffle cream</p>
-                        </div>
-                        <div class="menu__item__price">
+                        <input type="checkbox" id="main-dish01">
+                        <span class="menu__item__description">
+                            <strong>Roast Chicken with Provincal Herbs</strong>
+                            <small>With truffle cream</small>>
+                        </span>
+                        <span class="menu__item__price">
                             <span>40€</span>
-                        </div>
-                        <div class="menu__item__check">
+                        </span>
+                        <span class="menu__item__check">
                             <i class="fa-solid fa-circle-check"></i>
-                        </div>
+                        </span>
                     </label>
                     <label for="main-dish02" class="menu__item">
-                        <input class="menu__input" type="checkbox" id="main-dish02">
-                        <div class="menu__item__description">
-                            <h3>Roasted Lobster</h3>
-                            <p>With seasonal vegetables</p>
-                        </div>
-                        <div class="menu__item__price">
+                        <input type="checkbox" id="main-dish02">
+                        <span class="menu__item__description">
+                            <strong>Roasted Lobster</strong>
+                            <small>With seasonal vegetables</small>>
+                        </span>
+                        <span class="menu__item__price">
                             <span>35€</span>
-                        </div>
-                        <div class="menu__item__check">
+                        </span>
+                        <span class="menu__item__check">
                             <i class="fa-solid fa-circle-check"></i>
-                        </div>
+                        </span>
                     </label>
                     <label for="main-dish03" class="menu__item">
-                        <input class="menu__input" type="checkbox" id="main-dish03">
-                        <div class="menu__item__description">
-                            <h3>August Beef Ribs</h3>
-                            <p>With mashed parsnips</p>
-                        </div>
-                        <div class="menu__item__price">
+                        <input type="checkbox" id="main-dish03">
+                        <span class="menu__item__description">
+                            <strong>August Beef Ribs</strong>
+                            <small>With mashed parsnips</small>>
+                        </span>
+                        <span class="menu__item__price">
                             <span>44€</span>
-                        </div>
-                        <div class="menu__item__check">
+                        </span>
+                        <span class="menu__item__check">
                             <i class="fa-solid fa-circle-check"></i>
-                        </div>
+                        </span>
                     </label>
                 </div>
             </div>
@@ -130,48 +132,71 @@
                 <span class="menu__section-title">Desserts</span>
                 <div class="menu__section-items">
                     <label for="desserts01" class="menu__item">
-                        <input class="menu__input" type="checkbox" id="desserts01">
-                        <div class="menu__item__description">
-                            <h3>Assorted Dessert Plate</h3>
-                            <p>Chef's choice</p>
-                        </div>
-                        <div class="menu__item__price">
+                        <input type="checkbox" id="desserts01">
+                        <span class="menu__item__description">
+                            <strong>Assorted Dessert Plate</strong>
+                            <small>Chef's choice</small>>
+                        </span>
+                        <span class="menu__item__price">
                             <span>18€</span>
-                        </div>
-                        <div class="menu__item__check">
+                        </span>
+                        <span class="menu__item__check">
                             <i class="fa-solid fa-circle-check"></i>
-                        </div>
+                        </span>
                     </label>
                     <label for="desserts02" class="menu__item">
-                        <input class="menu__input" type="checkbox" id="desserts02">
-                        <div class="menu__item__description">
-                            <h3>Crème brulée</h3>
-                            <p>Revisted</p>
-                        </div>
-                        <div class="menu__item__price">
+                        <input type="checkbox" id="desserts02">
+                        <span class="menu__item__description">
+                            <strong>Crème brulée</strong>
+                            <small>Revisted</small>>
+                        </span>
+                        <span class="menu__item__price">
                             <span>22€</span>
-                        </div>
-                        <div class="menu__item__check">
+                        </span>
+                        <span class="menu__item__check">
                             <i class="fa-solid fa-circle-check"></i>
-                        </div>
+                        </span>
                     </label>
                     <label for="desserts03" class="menu__item">
-                        <input class="menu__input" type="checkbox" id="desserts03">
-                        <div class="menu__item__description">
-                            <h3>Tiramisu</h3>
-                            <p>With hazelnuts</p>
-                        </div>
-                        <div class="menu__item__price">
+                        <input type="checkbox" id="desserts03">
+                        <span class="menu__item__description">
+                            <strong>Tiramisu</strong>
+                            <small>With hazelnuts</small>>
+                        </span>
+                        <span class="menu__item__price">
                             <span>23€</span>
-                        </div>
-                        <div class="menu__item__check">
+                        </span>
+                        <span class="menu__item__check">
                             <i class="fa-solid fa-circle-check"></i>
-                        </div>
+                        </span>
                     </label>
                 </div>
             </div>
             <button class="menu__btn" type="submit">Order</button>
         </form>
     </main>
+    <footer>
+        <img class="logo" src="./images/logo/ohmyfood@2x.svg" alt="OhMyFood logo">
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-utensils fa-fw"></i>
+                    Suggest a restaurant
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-handshake-angle fa-fw"></i>
+                    Become a partner
+                </a>
+            </li>
+            <li>
+                <a href="#">Legal</a>
+            </li>
+            <li>
+                <a href="mailto:contact@ohmyfood.com">Contact</a>
+            </li>
+        </ul>
+    </footer>
 </body>
 </html>

@@ -7,7 +7,7 @@
     <title>Menu - The Enchanted Plate</title>
 
     <link rel="stylesheet" href="./css/reset.css">
-	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/menu-page.css">
 
     <!-- font Roboto -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
@@ -26,10 +26,12 @@
         <a href="index.html">
             <i class="fa-sharp fa-solid fa-arrow-left heading__btn-back"></i>
         </a>
-        <img class="heading__logo" src="./images/logo/ohmyfood@2x.svg" alt="OhMyFood logo">
+        <h1 class="heading__logo">
+            <img src="./images/logo/ohmyfood@2x.svg" alt="OhMyFood logo">
+        </h1>
     </header>
     <main>
-        <img class="menu-img" src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
+        <img class="menu-img" src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="A beautiful meal presentation">
         <div class="menu-title">
             <h2>The Enchanted Plate</h2>
             <label for="title-heart">
@@ -42,56 +44,56 @@
                 <span class="menu__section-title">Entrees</span>
                 <div class="menu__section-items">
                     <label for="entree01" class="menu__item">
-                        <input class="menu__input" type="checkbox" id="entree01">
-                        <div class="menu__item__description">
-                            <h3>Foie Gras Ravioli</h3>
-                            <p>With truffle cream</p>
-                        </div>
-                        <div class="menu__item__price">
+                        <input type="checkbox" id="entree01">
+                        <span class="menu__item__description">
+                            <strong>Foie Gras Ravioli</strong>
+                            <small>With truffle cream</small>
+                        </span>
+                        <span class="menu__item__price">
                             <span>25€</span>
-                        </div>
-                        <div class="menu__item__check">
+                        </span>
+                        <span class="menu__item__check">
                             <i class="fa-solid fa-circle-check"></i>
-                        </div>
+                        </span>
                     </label>
                     <label for="entree02" class="menu__item">
-                        <input class="menu__input" type="checkbox" id="entree02">
-                        <div class="menu__item__description">
-                            <h3>Oscietra Caviar</h3>
-                            <p>With buckwheat blinis</p>
-                        </div>
-                        <div class="menu__item__price">
+                        <input type="checkbox" id="entree02">
+                        <span class="menu__item__description">
+                            <strong>Oscietra Caviar</strong>
+                            <small>With buckwheat blinis</small>
+                        </span>
+                        <span class="menu__item__price">
                             <span>35€</span>
-                        </div>
-                        <div class="menu__item__check">
+                        </span>
+                        <span class="menu__item__check">
                             <i class="fa-solid fa-circle-check"></i>
-                        </div>
+                        </span>
                     </label>
                     <label for="entree03" class="menu__item">
-                        <input class="menu__input" type="checkbox" id="entree03">
-                        <div class="menu__item__description">
-                            <h3>Lobster and Leek Foam</h3>
-                            <p>Marinated with orange zest</p>
-                        </div>
-                        <div class="menu__item__price">
+                        <input type="checkbox" id="entree03">
+                        <span class="menu__item__description">
+                            <strong>Lobster and Leek Foam</strong>
+                            <small>Marinated with orange zest</small>
+                        </span>
+                        <span class="menu__item__price">
                             <span>20€</span>
-                        </div>
-                        <div class="menu__item__check">
+                        </span>
+                        <span class="menu__item__check">
                             <i class="fa-solid fa-circle-check"></i>
-                        </div>
+                        </span>
                     </label>
                     <label for="entree04" class="menu__item">
-                        <input class="menu__input" type="checkbox" id="entree04">
-                        <div class="menu__item__description">
-                            <h3>Duck Foie Gras</h3>
-                            <p>With fig jam and girlled baguette</p>
-                        </div>
-                        <div class="menu__item__price">
+                        <input type="checkbox" id="entree04">
+                        <span class="menu__item__description">
+                            <strong>Duck Foie Gras</strong>
+                            <small>With fig jam and girlled baguette</small>
+                        </span>
+                        <span class="menu__item__price">
                             <span>35€</span>
-                        </div>
-                        <div class="menu__item__check">
+                        </span>
+                        <span class="menu__item__check">
                             <i class="fa-solid fa-circle-check"></i>
-                        </div>
+                        </span>
                     </label>
                 </div>
             </div>
@@ -99,43 +101,43 @@
                 <span class="menu__section-title">Main Dish</span>
                 <div class="menu__section-items">
                     <label for="main-dish01" class="menu__item">
-                        <input class="menu__input" type="checkbox" id="main-dish01">
-                        <div class="menu__item__description">
-                            <h3>Fresh Buttered Scallops</h3>
-                            <p>With white celery puree</p>
-                        </div>
-                        <div class="menu__item__price">
+                        <input type="checkbox" id="main-dish01">
+                        <span class="menu__item__description">
+                            <strong>Fresh Buttered Scallops</strong>
+                            <small>With white celery puree</small>
+                        </span>
+                        <span class="menu__item__price">
                             <span>40€</span>
-                        </div>
-                        <div class="menu__item__check">
+                        </span>
+                        <span class="menu__item__check">
                             <i class="fa-solid fa-circle-check"></i>
-                        </div>
+                        </span>
                     </label>
                     <label for="main-dish02" class="menu__item">
-                        <input class="menu__input" type="checkbox" id="main-dish02">
-                        <div class="menu__item__description">
-                            <h3>Pan-Fried Lobster</h3>
-                            <p>With mashed sweet potatoes</p>
-                        </div>
-                        <div class="menu__item__price">
+                        <input type="checkbox" id="main-dish02">
+                        <span class="menu__item__description">
+                            <strong>Pan-Fried Lobster</strong>
+                            <small>With mashed sweet potatoes</small>
+                        </span>
+                        <span class="menu__item__price">
                             <span>35€</span>
-                        </div>
-                        <div class="menu__item__check">
+                        </span>
+                        <span class="menu__item__check">
                             <i class="fa-solid fa-circle-check"></i>
-                        </div>
+                        </span>
                     </label>
                     <label for="main-dish03" class="menu__item">
-                        <input class="menu__input" type="checkbox" id="main-dish03">
-                        <div class="menu__item__description">
-                            <h3>Braised Ox Tail</h3>
-                            <p>With wild rice and lemon zest</p>
-                        </div>
-                        <div class="menu__item__price">
+                        <input type="checkbox" id="main-dish03">
+                        <span class="menu__item__description">
+                            <strong>Braised Ox Tail</strong>
+                            <small>With wild rice and lemon zest</small>
+                        </span>
+                        <span class="menu__item__price">
                             <span>44€</span>
-                        </div>
-                        <div class="menu__item__check">
+                        </span>
+                        <span class="menu__item__check">
                             <i class="fa-solid fa-circle-check"></i>
-                        </div>
+                        </span>
                     </label>
                 </div>
             </div>
@@ -143,48 +145,71 @@
                 <span class="menu__section-title">Desserts</span>
                 <div class="menu__section-items">
                     <label for="desserts01" class="menu__item">
-                        <input class="menu__input" type="checkbox" id="desserts01">
-                        <div class="menu__item__description">
-                            <h3>Chocolate and Hazelnut Macaroon</h3>
-                            <p>With caramel butter ice cream</p>
-                        </div>
-                        <div class="menu__item__price">
+                        <input type="checkbox" id="desserts01">
+                        <span class="menu__item__description">
+                            <strong>Chocolate and Hazelnut Macaroon</strong>
+                            <small>With caramel butter ice cream</small>
+                        </span>
+                        <span class="menu__item__price">
                             <span>18€</span>
-                        </div>
-                        <div class="menu__item__check">
+                        </span>
+                        <span class="menu__item__check">
                             <i class="fa-solid fa-circle-check"></i>
-                        </div>
+                        </span>
                     </label>
                     <label for="desserts02" class="menu__item">
-                        <input class="menu__input" type="checkbox" id="desserts02">
-                        <div class="menu__item__description">
-                            <h3>Baba au Rhum</h3>
-                            <p>With lemon drizzle</p>
-                        </div>
-                        <div class="menu__item__price">
+                        <input type="checkbox" id="desserts02">
+                        <span class="menu__item__description">
+                            <strong>Baba au Rhum</strong>
+                            <small>With lemon drizzle</small>
+                        </span>
+                        <span class="menu__item__price">
                             <span>22€</span>
-                        </div>
-                        <div class="menu__item__check">
+                        </span>
+                        <span class="menu__item__check">
                             <i class="fa-solid fa-circle-check"></i>
-                        </div>
+                        </span>
                     </label>
                     <label for="desserts03" class="menu__item">
-                        <input class="menu__input" type="checkbox" id="desserts03">
-                        <div class="menu__item__description">
-                            <h3>Lemon Meringue Pie</h3>
-                            <p>Destructured</p>
-                        </div>
-                        <div class="menu__item__price">
+                        <input type="checkbox" id="desserts03">
+                        <span class="menu__item__description">
+                            <strong>Lemon Meringue Pie</strong>
+                            <small>Destructured</small>
+                        </span>
+                        <span class="menu__item__price">
                             <span>23€</span>
-                        </div>
-                        <div class="menu__item__check">
+                        </span>
+                        <span class="menu__item__check">
                             <i class="fa-solid fa-circle-check"></i>
-                        </div>
+                        </span>
                     </label>
                 </div>
             </div>
             <button class="menu__btn" type="submit">Order</button>
         </form>
     </main>
+    <footer>
+        <img class="logo" src="./images/logo/ohmyfood@2x.svg" alt="OhMyFood logo">
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-utensils fa-fw"></i>
+                    Suggest a restaurant
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-handshake-angle fa-fw"></i>
+                    Become a partner
+                </a>
+            </li>
+            <li>
+                <a href="#">Legal</a>
+            </li>
+            <li>
+                <a href="mailto:contact@ohmyfood.com">Contact</a>
+            </li>
+        </ul>
+    </footer>
 </body>
 </html>

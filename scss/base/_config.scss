@@ -25,3 +25,13 @@ p {
     color: lighten($dark-bg-color, 10%);
 /*    font-weight: 200; */
 }
+
+strong {
+    font-weight: 700;
+}
+
+small {
+    font-size: .9rem;
+    font-weight: 500;
+    color: lighten($dark-bg-color, 10%);
+}

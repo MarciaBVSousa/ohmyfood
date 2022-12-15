@@ -7,7 +7,7 @@
     <title>Ohmyfood</title>
 
     <link rel="stylesheet" href="./css/reset.css">
-	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/home.css">
 
     <!-- font Roboto -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
@@ -30,7 +30,9 @@
         </div>
     </div>
     <header class="heading">
-        <img class="heading__logo" src="./images/logo/ohmyfood@2x.svg" alt="OhMyFood logo">
+        <h1 class="heading__logo">
+            <img src="./images/logo/ohmyfood@2x.svg" alt="OhMyFood logo">
+        </h1>
     </header>
     <main>
         <div class="place">
@@ -61,58 +63,58 @@
         </div>
         <div class="restaurants">
             <h2>Restaurants</h2>
-            <a href="menu_the-full-palette.html" class="restaurants__card restaurants__card--new">
-                <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt=""> <!-- Insert alt -->
-                <div class="restaurants__card__title">
-                    <span>
+            <div class="restaurants__card restaurants__card--new">
+                <a href="menu_the-full-palette.html">
+                    <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="A beautiful meal presentation">
+                    <div class="restaurants__card__title">
                         <h3>The Full Pallete</h3>
                         <p>New York</p>
-                    </span>
-                    <label for="heart-full-pallete">
-                        <input type="checkbox" id="heart-full-pallete">
-                        <i class="fa-solid fa-heart"></i>
-                    </label>
-                </div>
-            </a>
-            <a href="menu_the-enchanted-plate.html" class="restaurants__card restaurants__card--new">
-                <img src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt=""> <!-- Insert alt -->
-                <div class="restaurants__card__title">
-                    <span>
+                    </div>
+                </a>
+                <label class="restaurants__card__heart" for="heart-full-pallete">
+                    <input type="checkbox" id="heart-full-pallete">
+                    <i class="fa-solid fa-heart"></i>
+                </label>
+            </div>
+            <div class="restaurants__card restaurants__card--new">
+                <a href="menu_the-enchanted-plate.html">
+                    <img src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="A beautiful meal presentation">
+                    <div class="restaurants__card__title">
                         <h3>The Enchanted Plate</h3>
                         <p>New York</p>
-                    </span>
-                    <label for="heart-echanted">
-                        <input type="checkbox" id="heart-echanted">
-                        <i class="fa-solid fa-heart"></i>
-                    </label>
-                </div>
-            </a>
-            <a href="menu_bastille.html" class="restaurants__card">
-                <img src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt=""> <!-- Insert alt -->
-                <div class="restaurants__card__title">
-                    <span>
+                    </div>
+                </a>
+                <label class="restaurants__card__heart" for="heart-echanted">
+                    <input type="checkbox" id="heart-echanted">
+                    <i class="fa-solid fa-heart"></i>
+                </label>
+            </div>
+            <div class="restaurants__card">
+                <a href="menu_bastille.html">
+                    <img src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="A beautiful meal presentation">
+                    <div class="restaurants__card__title">
                         <h3>Bastille</h3>
                         <p>New York</p>
-                    </span>
-                    <label for="heart-bastille">
-                        <input type="checkbox" id="heart-bastille">
-                        <i class="fa-solid fa-heart"></i>
-                    </label>
-                </div>
-            </a>
-            <a href="#" class="restaurants__card">
-                <img src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt=""> <!-- Insert alt -->
-                <div class="restaurants__card__title">
-                    <span>
+                    </div>
+                </a>
+                <label class="restaurants__card__heart" for="heart-bastille">
+                    <input type="checkbox" id="heart-bastille">
+                    <i class="fa-solid fa-heart"></i>
+                </label>
+            </div>
+            <div class="restaurants__card">
+                <a href="menu_le-gourmand.html">
+                    <img src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="A beautiful meal presentation">
+                    <div class="restaurants__card__title">
                         <h3>Le Gourmand</h3>
                         <p>New York</p>
-                    </span>
-                    <label for="heart-gourmand">
-                        <input type="checkbox" id="heart-gourmand">
-                        <i class="fa-solid fa-heart"></i>
-                    </label>
-                </div>
-            </a>
+                    </div>
+                </a>
+                <label class="restaurants__card__heart" for="heart-gourmand">
+                    <input type="checkbox" id="heart-gourmand">
+                    <i class="fa-solid fa-heart"></i>
+                </label>
+            </div>
         </div>
     </main>
     <footer>

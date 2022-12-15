@@ -142,42 +142,46 @@
 
     &__card {
         border-radius: 1rem;
-        height: 12rem;
+    /*    min-height: 12rem; */
         overflow: hidden;
         box-shadow: darken($light-bg-color, 20%) 0rem .2rem .3rem;
         color: darken($dark-bg-color, 30%);
-        
-        @include flex(column, flex-end);
         position: relative;
-        
-        > a, img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
 
-        &__title {
-            background-color: white;
-        /*    padding: 1rem; */
-            height: 4rem;
-            @include flex(row, space-between, center);
+        a {
+            @include flex(column, flex-end);
 
-            a {
-                flex-grow: 5;
-                padding: 1rem;
-
-                h3 {
-                    margin-bottom: .3rem;
-                }
-
-                &:visited {
-                    color: $dark-bg-color;
-                }
+            img {
+                width: 100%;
+                height: 8rem;
+                object-fit: cover;
             }
 
+            h3 {
+                font-size: 1.05rem;
+                margin-bottom: .2rem;
+            }
+
+            &:visited {
+                color: darken($dark-bg-color, 30%);
+            }
+        }
+
+        &__title {
+            box-sizing: border-box;
+            background-color: white;
+            padding: 1rem 3rem 1rem 1rem;
+            width: 100%;
+        /*    min-height: 4rem; */
+        }
+
+        &__heart {
+            position: absolute;
+            right: 1rem;
+            bottom: calc((100% - 8rem) / 3); /* 8rem -> card img height */
+        
             i {
-                padding: 1rem;
+            /*    margin: 1rem;  */
                 cursor: pointer;
                 @include heart--outline;
 
@@ -189,16 +193,6 @@
             @include input-check(i) {
                 @include heart--fill;
             }
-        
-            /*
-            input {
-                all: unset;
-                &:checked + i {
-                    @include heart--fill;
-               }
-            }
-            */
-
         }
 
         &--new {
@@ -220,6 +214,4 @@
             }
         }
     }
-
-
 }

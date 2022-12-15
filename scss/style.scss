@@ -14,7 +14,6 @@ $dark-bg-color: #353535;
 html {
     font-family: 'Roboto', sans-serif;
     /* font-family: 'Shrikhand', cursive; */
-
 }
 
 h2, h3 {
@@ -36,20 +35,81 @@ p {
 
 /*    box-shadow: darken($light-bg-color, 15%) .2rem .2rem .2rem; */
 
-/* BUTTON MIXIN */
-/* FLEX MIXIN */
+/* BUTTON MIXINs */
+
+@mixin flex($direction: row, $justify: flex-start, $align: stretch) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin btn-std {
+    height: 3rem;
+    padding: 0rem 1.5rem;
+    border: none;
+    border-radius: 2rem;
+    color:white;
+    background: linear-gradient(to bottom right, $secondary-color, $primary-color);
+    box-shadow: darken($light-bg-color, 20%) 0rem .2rem .3rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        background: linear-gradient(to bottom right, lighten($secondary-color, 5%), lighten($primary-color, 5%)); 
+        box-shadow: darken($light-bg-color, 50%) 0rem .2rem .3rem;
+    }
+}
+
+@mixin menu__item--checked {
+    width: 5rem;
+    transform: translateX(0);
+    i {
+        transform: rotate(0deg) ;
+    }
+}
+
+@mixin heart--outline {
+    font-weight: 100; 
+    font-size: 1.2rem;
+    color: $dark-bg-color;
+    transform: scale(1.1, 1.25);
+}
+
+@mixin heart--fill {
+    background: linear-gradient(to top right, $secondary-color, $primary-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    /* if incompatible browser */
+    color: $primary-color;
+}
+
+@mixin input-check($sibling) {
+    input {
+        all: unset;
+        &:checked ~ #{$sibling} {
+            @content;
+       }
+    }
+}
+
 
 /* BOX-SHADOW */
+/* BORDER */
+/* FORM (padding, width, heigth, margin)*/
 /* GRADIENT-BG*/
-/* TYPOGRAPHY 
-    -Font-size's list
-    -Fonts
+/* TYPOGRAPHY - MAP & MIXIN
+-Font-size's list
+-Fonts
 */
 
+/* FLEX MIXIN */
 /* HEART-HOVER MIXIN */
 /* BUTTON MIXIN */
-
 /* LANDING HOME ANIMATION */
+
 
 /*
 header, main, footer {
@@ -58,18 +118,19 @@ header, main, footer {
 } 
 */
 
+
+
+
+
 .landing {
     width: 100%;
     height: 100%;
     background: linear-gradient(to top right, lighten($secondary-color, 20%), lighten($primary-color, 25%));
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
     position: fixed;
     z-index: 4;
-    transform-origin: center top;
-    animation: fading .5s ease-in-out 3s 1 reverse both;
+/*    transform-origin: center top; */
+    animation: fading-hide .5s ease-in-out 3s 1 reverse both;
+    @include flex(column, center, center);
 /*    animation: name duration timing-function delay iteration-count direction fill-mode; */
 
     & > div {
@@ -98,9 +159,8 @@ header, main, footer {
     /*    box-shadow: darken($light-bg-color, 20%) 0rem .2rem .3rem; */
         box-shadow: inset darken($light-bg-color, 10%) 0.2rem 0.3rem 1rem, lighten($dark-bg-color, 40%) 0rem 0rem 0.6rem;
         position: absolute;
-        animation: rotating 1s 3 ease,
+        animation: rotating 1s 3 cubic-bezier(.24,.11,.68,.83);
     /*    -webkit-animation: rotating 1s infinite cubic-bezier(0.63,-0.32, 0.74, 0.05);  */
-
     }
 }
 
@@ -112,11 +172,15 @@ header, main, footer {
     }
 }
 
-@keyframes fading {
-    from {
-        opacity: 0;
+@keyframes fading-hide {
+    0% {
+        transform: scale(0);
     }
-    to {
+    1% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    100% {
         opacity: 1;
     }
 }
@@ -138,11 +202,9 @@ header, main, footer {
 
 .heading {
     padding-top: .5rem;
-    text-align: center;
     width: 100%;
     height: fit-content;
-    display: flex;
-    align-items: center;
+    @include flex($align: center);
 
     &__logo {
         padding: .6rem;
@@ -163,13 +225,9 @@ header, main, footer {
 .place {
     height: 3rem;
     background-color: darken($light-bg-color, 5%);
-    /*    text-align: center; */
     box-shadow: inset darken($light-bg-color, 20%) .2rem .2rem .2rem;
-    /* MIXIN FLEX */
-    display: flex;
-    flex-flow: row nowrap; 
-    justify-content: center;
-    align-items: center;
+    @include flex(row, center, center);
+
     & > * {
         padding: .5rem;
         color: lighten($dark-bg-color, 10%);
@@ -178,51 +236,25 @@ header, main, footer {
 
 .explore {
     height: 10rem;
-    background-color: $light-bg-color;
     text-align: center;
-    /* FLEX MIXIN */
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    align-items: center;
+    background-color: $light-bg-color;
     padding: 4rem 1.2rem;
+    @include flex(column, space-between, center);
     &__btn {
-        /* BTN MIXIN */
-        height: 3rem;
-        padding: 0rem 1.5rem;
-        border: none;
-        border-radius: 2rem;
-        color:white;
-        background: linear-gradient(to bottom right, $secondary-color, $primary-color);
-        box-shadow: darken($light-bg-color, 20%) 0rem .2rem .3rem;
-        cursor: pointer;
-        transition: all .3s ease-in-out;
-
-        &:hover {
-            /*    MIXIN BUTTON - HOVER  */
-                background: linear-gradient(to bottom right, lighten($secondary-color, 5%), lighten($primary-color, 5%)); 
-                box-shadow: darken($light-bg-color, 50%) 0rem .2rem .3rem;
-    
-            }
+        @include btn-std;
     }
 }
 
 .instructions {
     height: 20rem;
-    /* FLEX MIXIN */
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-around;
-    /* align-items: normal;  */
     padding: 1.2rem;
+    @include flex(column, space-around);
+
     & > div {
         height: 70%;
         width: 100%;
         margin-left: .6rem;
-        /* FLX MIXIN */
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-between;
+        @include flex(column, space-between);
     }
     
     &__btn {
@@ -232,10 +264,8 @@ header, main, footer {
         box-shadow: darken($light-bg-color, 10%) .1rem .2rem .6rem;
         padding-left: 1rem;
         position: relative;
-        /* FLEX MIXIN */
-        display: flex; 
-        justify-content: start;
-        align-items: center;
+        @include flex($align: center);
+
         & > * {
             padding: .6rem;
         }
@@ -282,11 +312,10 @@ header, main, footer {
         overflow: hidden;
         box-shadow: darken($light-bg-color, 20%) 0rem .2rem .3rem;
         color: darken($dark-bg-color, 30%);
-        /* FLEX MIXIN */
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: end;
+        
+        @include flex(column, flex-end);
         position: relative;
+        
 
         & img {
             width: 100%;
@@ -298,30 +327,29 @@ header, main, footer {
             background-color: white;
             padding: 1rem;
             height: 4rem;
-            /* FLEX MIXIN */
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-between;
-            align-items: center;
+            @include flex(row, space-between, center);
 
             i {
                 padding: .4rem;
-                /* HEART MIXIN */
-                font-weight: 100; 
-                font-size: 1.2rem;
-                color: $dark-bg-color;
-                transform: scale(1.1, 1.25);
+                @include heart--outline;
 
                 &:hover {
-                    background: linear-gradient(to top right, $secondary-color, $primary-color);
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    font-weight: 700;
-                    /* if incompatible browser */
-                    color: $primary-color;
+                    @include heart--fill;
                 }
             }
+
+            @include input-check(i) {
+                @include heart--fill;
+            }
+        
+            /*
+            input {
+                all: unset;
+                &:checked + i {
+                    @include heart--fill;
+               }
+            }
+            */
 
             &:visited {
                 color: $dark-bg-color;
@@ -402,9 +430,8 @@ footer {
     border-top-left-radius: 2.5rem;
     border-top-right-radius: 2.5rem;
     background-color: $light-bg-color;
-    /* -- FLEX MIXIN -- */
-    display: flex;
-    justify-content: space-between;
+    @include flex($justify: space-between);
+
 
     h2 {
         font-size: 2rem;
@@ -415,36 +442,26 @@ footer {
     i {
         padding: 0 1rem;
         /* HEART MIXIN */
-        font-size: 1.2rem;
-        font-weight: 100; 
-        color: $dark-bg-color;
-        transform: scale(1.1, 1.25);
+        @include heart--outline;
 
         /* HEART MIXIN */
         &:hover {
-            background: linear-gradient(to top right, $secondary-color, $primary-color);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 700;
-            /* if incompatible browser */
-            color: $primary-color;
+            @include heart--fill;
         }
     }
 
+    @include input-check(i) {
+        @include heart--fill;
+    }
+
+    /*
     input {
          all: unset;
         &:checked + i {
-            /* HEART-HOVER MIXIN */
-            background: linear-gradient(to top right, $secondary-color, $primary-color);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 700;
-            /* if incompatible browser */
-            color: $primary-color;
+            @include heart--fill;
         }
     }
+    */
 }
 
 .menu {
@@ -471,7 +488,7 @@ footer {
                 line-height: 1.5rem; /* to center the content*/
             }
 
-            @for $d from 1 through 3 {
+            @for $d from 1 through 4 {
                 & label:nth-of-type(#{$d}) {
                     
                     $t: ($i * 400) + (150 * $d);
@@ -510,9 +527,8 @@ footer {
             display: block;
             width: 3rem;
             height: .2rem;
-            margin: .4rem;
+            margin: .4rem .4rem -.6rem;
             background-color: $tertiary-color;
-            margin-bottom: -.6rem;
         }
     }
     
@@ -523,16 +539,15 @@ footer {
         margin: .5rem 0;
         height: 4rem;
         overflow: hidden; 
-        display: flex;
-        justify-content: space-between;
-        cursor: pointer; 
+        cursor: pointer;
+        @include flex($justify: space-between); 
 
         &__description {
         /*    box-sizing : border-box; */
             width: calc(100% - 3rem);
             padding: .8rem;
         /*    flex-shrink: 5; */
-            overflow: hidden;
+        /*    overflow: hidden; */
             min-width: 0;
 
 
@@ -542,12 +557,14 @@ footer {
                 text-overflow: ellipsis;
                 padding: .2rem;
             }
-
+        
+        /*
             p { 
                 font-size: .9rem;
                 font-weight: 500;
                 color: $dark-bg-color;
             }
+        */
             
         }
         
@@ -555,9 +572,7 @@ footer {
             color: $dark-bg-color;
             width: 3rem;
             padding: .8rem;
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
+            @include flex(row, center, flex-end);
 
         }
         
@@ -565,10 +580,9 @@ footer {
             width: 0;
             background-color: $tertiary-color;
             color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             transform: translateX(2rem);
+            @include flex(row, center, center);
+
             i {
                 font-size: 1.4rem;
                 transform: rotate(-360deg);
@@ -576,55 +590,35 @@ footer {
 
             &, i {
                 transition: all ease-in-out .5s;
-            } 
-                
+            }    
         }
 
         &:hover {
             .menu__item__check {
-                /* MIXIN CHECKED */
-                width: 5rem;
-                transform: translateX(0);
-                i {
-                    transform: rotate(0deg);
-                }
+                @include menu__item--checked;
             }
         }
 
+        @include input-check(".menu__item__check") {
+            background-color: darken($tertiary-color, 15%);
+            @include menu__item--checked;
+        }
+
+    /*
         input {
             all: unset;
             &:checked ~ .menu__item__check {
-                /* MIXIN CHECKED */
                 background-color: darken($tertiary-color, 15%);
-                width: 5rem;
-                transform: translateX(0);
-                i {
-                    transform: rotate(0deg) ;
-                }
+                @include menu__item--checked;
             }
         }
+    */
     }
 
     &__btn {
         display: block;
         width: 10rem;
         margin: 1rem auto;
-        /* BTN MIXIN */
-        height: 3rem;
-        padding: 0rem 1.5rem;
-        border: none;
-        border-radius: 2rem;
-        color:white;
-        background: linear-gradient(to bottom right, $secondary-color, $primary-color);
-        box-shadow: darken($light-bg-color, 20%) 0rem .2rem .3rem;
-        cursor: pointer;
-        transition: all .3s ease-in-out;
-
-        &:hover {
-        /*    MIXIN BUTTON - HOVER  */
-            background: linear-gradient(to bottom right, lighten($secondary-color, 5%), lighten($primary-color, 5%)); 
-            box-shadow: darken($light-bg-color, 50%) 0rem .2rem .3rem;
-
-        }
+        @include btn-std;
     }
 }
