@@ -3,7 +3,6 @@
 
 html {
     font-family: 'Roboto', sans-serif;
-    /* font-family: 'Shrikhand', cursive; */
 }
 
 h2, h3 {
@@ -20,10 +19,9 @@ span {
 }
 
 p {
-    font-size: .9rem;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 400;
     color: lighten($dark-bg-color, 10%);
-/*    font-weight: 200; */
 }
 
 strong {

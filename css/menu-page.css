@@ -1,10 +1,5 @@
-/* Colors */
-/* purple */
-/* pink */
-/* light green */
 html {
   font-family: "Roboto", sans-serif;
-  /* font-family: 'Shrikhand', cursive; */
 }
 
 h2, h3 {
@@ -21,10 +16,9 @@ span {
 }
 
 p {
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 400;
   color: #4f4f4f;
-  /*    font-weight: 200; */
 }
 
 strong {
@@ -37,7 +31,6 @@ small {
   color: #4f4f4f;
 }
 
-/* MIXINs */
 /* HOME ANIMATION */
 @-webkit-keyframes rotating {
   to {
@@ -104,7 +97,6 @@ small {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  /* -- MENU PAGE -- */
 }
 .heading__logo {
   flex-grow: 2;
@@ -173,28 +165,18 @@ footer a:hover, footer li:hover {
   flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
-  /*
-  input {
-       all: unset;
-      &:checked + i {
-          @include heart--fill;
-      }
-  }
-  */
 }
 .menu-title h2 {
-  font-size: 2rem;
   font-family: "Shrikhand";
+  font-size: 2rem;
   font-weight: 500;
 }
 .menu-title i {
   padding: 0 1rem;
-  /* HEART MIXIN */
   font-weight: 100;
   font-size: 1.2rem;
   color: #353535;
   transform: scale(1.1, 1.25);
-  /* HEART MIXIN */
 }
 .menu-title i:hover {
   background: linear-gradient(to top right, #FF79DA, #9356DC);
@@ -228,35 +210,11 @@ footer a:hover, footer li:hover {
   -webkit-animation-delay: 620ms;
           animation-delay: 620ms;
 }
-.menu > div:nth-of-type(1)::before {
-  content: "0.6";
-  font-size: 0.8rem;
-  width: 1.4rem;
-  height: 1.4rem;
-  background-color: #FF79DA;
-  color: white;
-  border-radius: 50%;
-  position: absolute;
-  text-align: center;
-  line-height: 1.5rem; /* to center the content*/
-}
 .menu > div:nth-of-type(1) label:nth-of-type(1) {
   -webkit-animation: menu-items-landing 0.6s ease-in-out 1 both;
           animation: menu-items-landing 0.6s ease-in-out 1 both;
   -webkit-animation-delay: 740ms;
           animation-delay: 740ms;
-}
-.menu > div:nth-of-type(1) label:nth-of-type(1)::before {
-  content: "640";
-  font-size: 0.8rem;
-  width: 1.4rem;
-  height: 1.4rem;
-  background-color: #9356DC;
-  color: white;
-  border-radius: 50%;
-  position: absolute;
-  text-align: center;
-  line-height: 1.5rem; /* to center the content*/
 }
 .menu > div:nth-of-type(1) label:nth-of-type(2) {
   -webkit-animation: menu-items-landing 0.6s ease-in-out 1 both;
@@ -264,35 +222,11 @@ footer a:hover, footer li:hover {
   -webkit-animation-delay: 920ms;
           animation-delay: 920ms;
 }
-.menu > div:nth-of-type(1) label:nth-of-type(2)::before {
-  content: "880";
-  font-size: 0.8rem;
-  width: 1.4rem;
-  height: 1.4rem;
-  background-color: #9356DC;
-  color: white;
-  border-radius: 50%;
-  position: absolute;
-  text-align: center;
-  line-height: 1.5rem; /* to center the content*/
-}
 .menu > div:nth-of-type(1) label:nth-of-type(3) {
   -webkit-animation: menu-items-landing 0.6s ease-in-out 1 both;
           animation: menu-items-landing 0.6s ease-in-out 1 both;
   -webkit-animation-delay: 1100ms;
           animation-delay: 1100ms;
-}
-.menu > div:nth-of-type(1) label:nth-of-type(3)::before {
-  content: "1120";
-  font-size: 0.8rem;
-  width: 1.4rem;
-  height: 1.4rem;
-  background-color: #9356DC;
-  color: white;
-  border-radius: 50%;
-  position: absolute;
-  text-align: center;
-  line-height: 1.5rem; /* to center the content*/
 }
 .menu > div:nth-of-type(1) label:nth-of-type(4) {
   -webkit-animation: menu-items-landing 0.6s ease-in-out 1 both;
@@ -300,35 +234,11 @@ footer a:hover, footer li:hover {
   -webkit-animation-delay: 1280ms;
           animation-delay: 1280ms;
 }
-.menu > div:nth-of-type(1) label:nth-of-type(4)::before {
-  content: "1360";
-  font-size: 0.8rem;
-  width: 1.4rem;
-  height: 1.4rem;
-  background-color: #9356DC;
-  color: white;
-  border-radius: 50%;
-  position: absolute;
-  text-align: center;
-  line-height: 1.5rem; /* to center the content*/
-}
 .menu > div:nth-of-type(2) {
   -webkit-animation: menu-items-landing 0.6s ease-in-out 1 both;
           animation: menu-items-landing 0.6s ease-in-out 1 both;
   -webkit-animation-delay: 1240ms;
           animation-delay: 1240ms;
-}
-.menu > div:nth-of-type(2)::before {
-  content: "1.2";
-  font-size: 0.8rem;
-  width: 1.4rem;
-  height: 1.4rem;
-  background-color: #FF79DA;
-  color: white;
-  border-radius: 50%;
-  position: absolute;
-  text-align: center;
-  line-height: 1.5rem; /* to center the content*/
 }
 .menu > div:nth-of-type(2) label:nth-of-type(1) {
   -webkit-animation: menu-items-landing 0.6s ease-in-out 1 both;
@@ -336,35 +246,11 @@ footer a:hover, footer li:hover {
   -webkit-animation-delay: 1140ms;
           animation-delay: 1140ms;
 }
-.menu > div:nth-of-type(2) label:nth-of-type(1)::before {
-  content: "1040";
-  font-size: 0.8rem;
-  width: 1.4rem;
-  height: 1.4rem;
-  background-color: #9356DC;
-  color: white;
-  border-radius: 50%;
-  position: absolute;
-  text-align: center;
-  line-height: 1.5rem; /* to center the content*/
-}
 .menu > div:nth-of-type(2) label:nth-of-type(2) {
   -webkit-animation: menu-items-landing 0.6s ease-in-out 1 both;
           animation: menu-items-landing 0.6s ease-in-out 1 both;
   -webkit-animation-delay: 1320ms;
           animation-delay: 1320ms;
-}
-.menu > div:nth-of-type(2) label:nth-of-type(2)::before {
-  content: "1280";
-  font-size: 0.8rem;
-  width: 1.4rem;
-  height: 1.4rem;
-  background-color: #9356DC;
-  color: white;
-  border-radius: 50%;
-  position: absolute;
-  text-align: center;
-  line-height: 1.5rem; /* to center the content*/
 }
 .menu > div:nth-of-type(2) label:nth-of-type(3) {
   -webkit-animation: menu-items-landing 0.6s ease-in-out 1 both;
@@ -372,35 +258,11 @@ footer a:hover, footer li:hover {
   -webkit-animation-delay: 1500ms;
           animation-delay: 1500ms;
 }
-.menu > div:nth-of-type(2) label:nth-of-type(3)::before {
-  content: "1520";
-  font-size: 0.8rem;
-  width: 1.4rem;
-  height: 1.4rem;
-  background-color: #9356DC;
-  color: white;
-  border-radius: 50%;
-  position: absolute;
-  text-align: center;
-  line-height: 1.5rem; /* to center the content*/
-}
 .menu > div:nth-of-type(2) label:nth-of-type(4) {
   -webkit-animation: menu-items-landing 0.6s ease-in-out 1 both;
           animation: menu-items-landing 0.6s ease-in-out 1 both;
   -webkit-animation-delay: 1680ms;
           animation-delay: 1680ms;
-}
-.menu > div:nth-of-type(2) label:nth-of-type(4)::before {
-  content: "1760";
-  font-size: 0.8rem;
-  width: 1.4rem;
-  height: 1.4rem;
-  background-color: #9356DC;
-  color: white;
-  border-radius: 50%;
-  position: absolute;
-  text-align: center;
-  line-height: 1.5rem; /* to center the content*/
 }
 .menu > div:nth-of-type(3) {
   -webkit-animation: menu-items-landing 0.6s ease-in-out 1 both;
@@ -408,35 +270,11 @@ footer a:hover, footer li:hover {
   -webkit-animation-delay: 1860ms;
           animation-delay: 1860ms;
 }
-.menu > div:nth-of-type(3)::before {
-  content: "1.8";
-  font-size: 0.8rem;
-  width: 1.4rem;
-  height: 1.4rem;
-  background-color: #FF79DA;
-  color: white;
-  border-radius: 50%;
-  position: absolute;
-  text-align: center;
-  line-height: 1.5rem; /* to center the content*/
-}
 .menu > div:nth-of-type(3) label:nth-of-type(1) {
   -webkit-animation: menu-items-landing 0.6s ease-in-out 1 both;
           animation: menu-items-landing 0.6s ease-in-out 1 both;
   -webkit-animation-delay: 1540ms;
           animation-delay: 1540ms;
-}
-.menu > div:nth-of-type(3) label:nth-of-type(1)::before {
-  content: "1440";
-  font-size: 0.8rem;
-  width: 1.4rem;
-  height: 1.4rem;
-  background-color: #9356DC;
-  color: white;
-  border-radius: 50%;
-  position: absolute;
-  text-align: center;
-  line-height: 1.5rem; /* to center the content*/
 }
 .menu > div:nth-of-type(3) label:nth-of-type(2) {
   -webkit-animation: menu-items-landing 0.6s ease-in-out 1 both;
@@ -444,53 +282,17 @@ footer a:hover, footer li:hover {
   -webkit-animation-delay: 1720ms;
           animation-delay: 1720ms;
 }
-.menu > div:nth-of-type(3) label:nth-of-type(2)::before {
-  content: "1680";
-  font-size: 0.8rem;
-  width: 1.4rem;
-  height: 1.4rem;
-  background-color: #9356DC;
-  color: white;
-  border-radius: 50%;
-  position: absolute;
-  text-align: center;
-  line-height: 1.5rem; /* to center the content*/
-}
 .menu > div:nth-of-type(3) label:nth-of-type(3) {
   -webkit-animation: menu-items-landing 0.6s ease-in-out 1 both;
           animation: menu-items-landing 0.6s ease-in-out 1 both;
   -webkit-animation-delay: 1900ms;
           animation-delay: 1900ms;
 }
-.menu > div:nth-of-type(3) label:nth-of-type(3)::before {
-  content: "1920";
-  font-size: 0.8rem;
-  width: 1.4rem;
-  height: 1.4rem;
-  background-color: #9356DC;
-  color: white;
-  border-radius: 50%;
-  position: absolute;
-  text-align: center;
-  line-height: 1.5rem; /* to center the content*/
-}
 .menu > div:nth-of-type(3) label:nth-of-type(4) {
   -webkit-animation: menu-items-landing 0.6s ease-in-out 1 both;
           animation: menu-items-landing 0.6s ease-in-out 1 both;
   -webkit-animation-delay: 2080ms;
           animation-delay: 2080ms;
-}
-.menu > div:nth-of-type(3) label:nth-of-type(4)::before {
-  content: "2160";
-  font-size: 0.8rem;
-  width: 1.4rem;
-  height: 1.4rem;
-  background-color: #9356DC;
-  color: white;
-  border-radius: 50%;
-  position: absolute;
-  text-align: center;
-  line-height: 1.5rem; /* to center the content*/
 }
 .menu__section {
   margin-bottom: 3rem;
@@ -521,31 +323,11 @@ footer a:hover, footer li:hover {
   flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
-  /*
-      input {
-          all: unset;
-          &:checked ~ .menu__item__check {
-              background-color: darken($tertiary-color, 15%);
-              @include menu__item--checked;
-          }
-      }
-  */
 }
 .menu__item__description {
-  /*    box-sizing : border-box; */
   width: 100%;
   padding: 0.8rem;
-  /*    flex-shrink: 5; */
-  /*    overflow: hidden; */
   min-width: 0;
-  /*
-  p { 
-
-      font-size: .9rem;
-      font-weight: 500;
-      color: $dark-bg-color;
-  }
-  */
 }
 .menu__item__description strong, .menu__item__description small {
   overflow: hidden;
@@ -578,7 +360,7 @@ footer a:hover, footer li:hover {
   transform: rotate(-360deg);
 }
 .menu__item__check, .menu__item__check i {
-  transition: all ease-in-out 0.5s;
+  transition: all ease 0.5s;
 }
 .menu__item:hover .menu__item__check {
   width: 5rem;

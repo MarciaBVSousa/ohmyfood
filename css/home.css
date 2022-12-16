@@ -1,10 +1,5 @@
-/* Colors */
-/* purple */
-/* pink */
-/* light green */
 html {
   font-family: "Roboto", sans-serif;
-  /* font-family: 'Shrikhand', cursive; */
 }
 
 h2, h3 {
@@ -21,10 +16,9 @@ span {
 }
 
 p {
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 400;
   color: #4f4f4f;
-  /*    font-weight: 200; */
 }
 
 strong {
@@ -37,7 +31,6 @@ small {
   color: #4f4f4f;
 }
 
-/* MIXINs */
 /* HOME ANIMATION */
 @-webkit-keyframes rotating {
   to {
@@ -104,7 +97,6 @@ small {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  /* -- MENU PAGE -- */
 }
 .heading__logo {
   flex-grow: 2;
@@ -155,14 +147,12 @@ footer a:hover, footer li:hover {
   height: 100%;
   background: linear-gradient(to top right, #ffdff6, #d7c0f2);
   position: fixed;
-  z-index: 4;
-  /*    transform-origin: center top; */
+  z-index: 1;
   animation: fading-hide 0.5s ease-in-out 3s 1 reverse both;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /*    animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 .landing > div {
   position: relative;
@@ -170,10 +160,9 @@ footer a:hover, footer li:hover {
   height: 120px;
 }
 .landing i {
-  z-index: 6;
+  z-index: 2;
   position: absolute;
-  /*    color: lighten($primary-color, 15%); /* purple */
-  color: #e9e9e9; /* gray */
+  color: #e9e9e9;
   font-size: 3rem;
   transform: translate(36px, 38px);
   text-shadow: #b5b5b5 3px 3px 2px;
@@ -185,12 +174,10 @@ footer a:hover, footer li:hover {
   border: 10px solid #f6f6f6;
   border-radius: 50%;
   border-top-color: #99E2D0;
-  /*    box-shadow: darken($light-bg-color, 20%) 0rem .2rem .3rem; */
   box-shadow: inset #dddddd 0.2rem 0.3rem 1rem, #9b9b9b 0rem 0rem 0.6rem;
   position: absolute;
   -webkit-animation: rotating 1s 3 cubic-bezier(0.24, 0.11, 0.68, 0.83);
           animation: rotating 1s 3 cubic-bezier(0.24, 0.11, 0.68, 0.83);
-  /*    -webkit-animation: rotating 1s infinite cubic-bezier(0.63,-0.32, 0.74, 0.05);  */
 }
 
 /* Body */
@@ -209,17 +196,17 @@ footer a:hover, footer li:hover {
 }
 
 .explore {
-  height: 10rem;
+  height: 11rem;
   text-align: center;
   background-color: #f6f6f6;
-  padding: 4rem 1.2rem;
+  padding: 3rem 1.2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
 .explore p {
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: #828282;
 }
 .explore__btn {
@@ -248,7 +235,7 @@ footer a:hover, footer li:hover {
 }
 .instructions > div {
   height: 70%;
-  width: 100%;
+  width: calc(100% - 0.6rem); /* margin-left value*/
   margin-left: 0.6rem;
   display: flex;
   flex-direction: column;
@@ -325,10 +312,8 @@ footer a:hover, footer li:hover {
 }
 .restaurants__card {
   border-radius: 1rem;
-  /*    min-height: 12rem; */
   overflow: hidden;
   box-shadow: #c3c3c3 0rem 0.2rem 0.3rem;
-  color: black;
   position: relative;
 }
 .restaurants__card a {
@@ -344,6 +329,7 @@ footer a:hover, footer li:hover {
      object-fit: cover;
 }
 .restaurants__card a h3 {
+  color: black;
   font-size: 1.05rem;
   margin-bottom: 0.2rem;
 }
@@ -355,15 +341,13 @@ footer a:hover, footer li:hover {
   background-color: white;
   padding: 1rem 3rem 1rem 1rem;
   width: 100%;
-  /*    min-height: 4rem; */
 }
 .restaurants__card__heart {
   position: absolute;
   right: 1rem;
-  bottom: calc((100% - 8rem) / 3); /* 8rem -> card img height */
+  bottom: calc((100% - 8rem) / 3); /* card img height */
 }
 .restaurants__card__heart i {
-  /*    margin: 1rem;  */
   cursor: pointer;
   font-weight: 100;
   font-size: 1.2rem;
@@ -396,7 +380,6 @@ footer a:hover, footer li:hover {
   position: absolute;
   right: 1rem;
   top: 1rem;
-  /* MAP/MIXIN typography */
   font-weight: 700;
   font-size: 0.8rem;
   text-align: center;

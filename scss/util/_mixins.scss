@@ -1,8 +1,6 @@
 @use 'variables' as *;
 
 
-/* MIXINs */
-
 @mixin flex($direction: row, $justify: flex-start, $align: stretch) {
     display: flex;
     flex-direction: $direction;
