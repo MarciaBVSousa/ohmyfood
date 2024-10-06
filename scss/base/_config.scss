@@ -33,6 +33,14 @@ small {
     font-weight: 500;
     color: lighten($dark-bg-color, 10%);
 }
+
+/* Ajusts */
 body {
     max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px lightgrey;
+    background-color: #F9F9F9;
+}
+header {
+    background-color: white;
 }
