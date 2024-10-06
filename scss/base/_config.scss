@@ -33,3 +33,6 @@ small {
     font-weight: 500;
     color: lighten($dark-bg-color, 10%);
 }
+body {
+    max-width: 900px;
+}
